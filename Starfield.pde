@@ -1,6 +1,6 @@
 Particle [] stars;
 int myX=300;
-int myY=300;//your code here
+int myY=300;
 void setup()
 {
   size (600, 600);
@@ -15,8 +15,7 @@ void setup()
       stars[i] = new OddballParticle();
     else
       stars[i] = new NormalParticle();
-  }//your code here
-}
+  }
 void draw()
 {
   background(0);
