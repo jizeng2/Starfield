@@ -61,12 +61,12 @@ class NormalParticle implements Particle
     noStroke();
     fill(myColor);
     ellipse((int)dX, (int)dY, 8, 8);
-  }//your code here
+  }
 }
 interface Particle
 {
   public void show();
-  public void move();//your code here
+  public void move();
 }
 class OddballParticle implements Particle//uses an interface
 {
@@ -89,14 +89,14 @@ class OddballParticle implements Particle//uses an interface
     noStroke();
     fill(myColor);
     ellipse((int)dX, (int)dY, 8, 8);
-  }//your code here
+  }
 }
-class JumboParticle extends NormalParticle//uses inheritance
+class JumboParticle extends NormalParticle
 {
   public void show()
   {
     noStroke();
     fill(179, 227, 156);
     ellipse((float)dX,(float)dY,20,20);
-  }//your code here
+  }
 }
