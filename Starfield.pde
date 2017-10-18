@@ -5,7 +5,6 @@ void setup()
 {
   size (600, 600);
   background(0);
-  frameRate(60);
   stars = new Particle[200];
   for (int i = 0; i < stars.length; i++)
   {
@@ -16,6 +15,7 @@ void setup()
     else
       stars[i] = new NormalParticle();
   }
+}
 void draw()
 {
   background(0);
@@ -43,6 +43,7 @@ class NormalParticle implements Particle
 {
   double dX, dY, speed, angle;
   int myColor;
+  NormalParticle()
   {
     speed=Math.random()*2;
     angle=Math.random()*6.28;
@@ -67,10 +68,11 @@ interface Particle
   public void show();
   public void move();
 }
-class OddballParticle implements Particle//uses an interface
+class OddballParticle implements Particle
 {
   double dX, dY, speed, angle;
   int myColor;
+  OddballParticle()
   {
     speed=Math.random()*5;
     angle=Math.random()*3;
@@ -96,6 +98,6 @@ class JumboParticle extends NormalParticle
   {
     noStroke();
     fill(179, 227, 156);
-    ellipse((float)dX,(float)dY,20,20);
+    ellipse((float)dX, (float)dY, 20, 20);
   }
 }
